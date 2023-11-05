@@ -13,3 +13,38 @@ Directory Structure: The first script creates a necessary directory structure ex
 Nginx Configuration: The first script doesn't override the default nginx configuration, which can be a good practice as it allows for easier maintenance and updates of the image. The second script replaces the nginx configuration with a specific one from a URL.
 
 Git Installation: The second script installs Git after updating the package list, but it's not clear if it's being used. If Git is not necessary for the image's functionality, it's better not to include it.
+
+
+
+
+Steps to run locally 
+docker build -t my_nginx_image .
+
+
+docker run -d -p 80:80 my_nginx_image
+
+
+Troubleshooting steps 
+docker exec -it <container_id> service nginx restart
+docker exec -it <container_id> cat /var/log/nginx/error.log
+
+
+Please validate any other issue that you can face during this build using the dockerhub documentation.
+
+
+
+Index, about the running process 
+![Screenshot 2023-11-05 at 4 22 10 PM](https://github.com/cchanto/IBM-Test/assets/35463225/60d43da8-6054-4c18-86ab-ab885c84c8d8)
+
+
+![Screenshot 2023-11-05 at 4 22 24 PM](https://github.com/cchanto/IBM-Test/assets/35463225/9e018012-eedb-4051-ade3-f9647534f8d9)
+
+![Screenshot 2023-11-05 at 4 22 46 PM](https://github.com/cchanto/IBM-Test/assets/35463225/72384fdf-0405-4e09-a188-3b6fdfa94d63)
+
+
+
+
+
+
+
+
